@@ -1,0 +1,46 @@
+ <!-- <table>
+  <tr>
+      <td>Sr. No</td>
+    <td>Name</td>
+    <td>Last Name</td>
+  </tr>
+  <tr *ngFor="let record of records; let myIndex = index; let evenRecords = even; let oddRecords = odd" [ngClass]="{odd :oddRecords, even : evenRecords}" >
+    <td>{{myIndex+1}}</td>
+    <td>{{record.name}}</td>
+    <td>{{record.lname}}</td>
+  </tr>
+</table>    -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" style="margin-top : 10px;">
+    <app-my-switch></app-my-switch>
+  </div>
+  </div>
+</div>
+<div class="container" style="margin-top : 10px;">
+
+<div class="row">
+   
+
+ <input type="button" value="One" (click)="mynum=1">
+ <input type="button" value="Two" (click)="mynum=2">
+ <input type="button" value="Three" (click)="mynum=3">
+ <input type="button" value="Four" (click)="mynum=4">
+ <input type="button" value="Five" (click)="mynum=5">
+ <input type="button" value="Six" (click)="mynum=6">
+ <input type="button" value="Seven" (click)="mynum=7">
+
+ <div  [ngSwitch]="mynum">
+   <div *ngSwitchCase="1">Mon</div>
+   <div *ngSwitchCase="2">Tue</div>
+   <div *ngSwitchCase="3">Wen</div>
+   <div *ngSwitchCase="4">Thu</div>
+   <div *ngSwitchCase="5">Fri</div>
+   <div *ngSwitchCase="6">Sat</div>
+   <div *ngSwitchCase="7">Sun</div>
+   
+ </div>
+</div>
+</div>
